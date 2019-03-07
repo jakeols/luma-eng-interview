@@ -1,0 +1,35 @@
+{
+  "name": "luma-eng-interview",
+  "version": "1.0.0",
+  "description": "A busy hospital has a list of dates that a doctor is available to see patients. Their process is manual and error prone leading to overbooking. They also have a hard time visualizing all of the available time for a doctor for specific dates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeols/luma-eng-interview.git"
+  },
+  "author": "Jake Ols",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakeols/luma-eng-interview/issues"
+  },
+  "homepage": "https://github.com/jakeols/luma-eng-interview#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "config": "^3.0.1",
+    "express": "^4.16.4",
+    "mocha": "^6.0.2",
+    "mongoose": "^5.4.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0"
+  }
+}
