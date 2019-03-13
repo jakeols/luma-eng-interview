@@ -1,30 +1,47 @@
 # Luma Technical Interview
 
-## Problem Definition
+Here is the code for the REST API. API documentation can be found via <a herf="https://documenter.getpostman.com/view/4637176/S11PpbFA#intro">Postman </a>.
 
-A busy hospital has a list of dates that a doctor is available to see patients. Their process is manual and error prone leading to overbooking. They also have a hard time visualizing all of the available time for a doctor for specific dates. 
+## Getting Started
 
-## Interview Task
+The following instructions will cover project setup and testing. 
 
-Create a REST API that enables a simple scheduling system that manages doctor availabilities and allows patients to book appointments.
+### Prerequisites
 
-## Data Model
+This REST API was built with Node.js and MongoDB, however MongoDB Atlas was used so one can test without having to worry about setting up a personal server. 
 
-Define a set of data models that include:
+### Installing
 
-* a way track assign booked appointments
-* a way to track patients
-* a way to track doctors 
-* a way to track a doctor's working hours and days
+First clone the repository
 
-## REST API
+```
+git clone https://github.com/jakeols/luma-eng-interview/
+```
 
-Implement the following functionality:
+Install dependencies
 
-* Find a doctor's working hours
-* Book an doctor opening
-* Create and update the list of doctor's working hours
+```
+npm install
+```
 
-## Deliverables
+## Running the tests
 
-The code should be delivered as a library that anyone can import and use. It should contain documentation and unit tests that show your understanding of the problem. Once you&#39;re finished, submit a PR to this repo.
+Testing is done via nyc, Chai, and Mocha, and has been configured. 
+
+```
+npm test
+```
+
+## Built With
+
+* [Express.js](https://expressjs.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Istanbul](https://istanbul.js.org/)
+* [Chai](https://www.chaijs.com/)
+* [Mocha](https://mochajs.org/)
+* [MongoDB](https://www.mongodb.com/)
+
+
+## Acknowledgments
+
+* Thanks for the great interview project! It was a great change of pace compared to HackerRank challenges :) 
