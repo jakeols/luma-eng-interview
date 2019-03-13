@@ -26,7 +26,7 @@ npm install
 
 ## Running the tests
 
-Testing is done via nyc, Chai, and Mocha, and has been configured. 
+Testing is done via Instanbul (nyc), Chai, and Mocha, and has been configured. 
 
 ```
 npm test
