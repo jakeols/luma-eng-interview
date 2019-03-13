@@ -1,6 +1,6 @@
 # Luma Technical Interview
 
-Here is the code for the REST API. API documentation can be found via <a herf="https://documenter.getpostman.com/view/4637176/S11PpbFA#intro">Postman </a>.
+Here is the code for the REST API. API documentation can be found via [Postman](https://documenter.getpostman.com/view/4637176/S11PpbFA#intro).
 
 ## Getting Started
 
