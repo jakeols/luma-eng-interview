@@ -5,7 +5,6 @@ getAllDoctors = ((req, res) => {
     let query = Doctor.find({});
     query.exec((err, doctors) => {
         if(err) res.send(err);
-        //If no errors, send them back to the client
         res.json(doctors);
     });
 })
@@ -14,16 +13,13 @@ getAllDoctors = ((req, res) => {
 getDoctorById = ((req, res) => {
     Doctor.findById(req.params.id, (err, doctor) => {
         if(err) res.send(err);
-        //If no errors, send it back to the client
         res.json(doctor);
     }); 
 })
 
 // create doctor
 createDoctor = ((req, res) => {
-    //Creates a new doctor
     var newDoctor = new Doctor(req.body);
-    //Save it into the DB.
     newDoctor.save((err,doctor) => {
         if(err) {
             res.send(err);
@@ -34,8 +30,19 @@ createDoctor = ((req, res) => {
     });
 })
 
+updateDoctor = ((req, res) => {
+    Doctor.findById({_id: req.params.id}, (err, doctor) => {
+        if(err) res.send(err);
+        Object.assign(doctor, req.body).save((err, doctor) => {
+            if(err) res.send(err);
+            res.json({ message: 'Doctor updated!', doctor });
+        });    
+    });
+})
+
 module.exports = {
     getAllDoctors,
     getDoctorById,
-    createDoctor
+    createDoctor,
+    updateDoctor
 }

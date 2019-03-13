@@ -1,1 +1,1 @@
-{ "DBHost": "YOUR_TEST_URI" }
+{ "DBHost": "mongodb+srv://admin:XfcnCPsMTt39r35M@cluster0-p2pcy.mongodb.net/test?retryWrites=true" }

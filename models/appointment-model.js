@@ -5,7 +5,8 @@ var Patients = require('./patient-model');
 var Schema = mongoose.Schema;
 
 var appointmentSchema = new Schema({
-  time: String,
+  startTime: Number,
+  endTime: Number,
   doctor: [{type: Schema.Types.ObjectId, ref: 'Doctor'}],
   patient: [{type: Schema.Types.ObjectId, ref: 'Patient'}],
 }); 

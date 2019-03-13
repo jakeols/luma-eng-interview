@@ -1,14 +1,7 @@
 const routes = require('express').Router();
-const controller = require('../controllers');
 const patientController = require('../controllers/patient-controller');
 const appointmentController = require('../controllers/appointment-controller')
 const doctorController = require('../controllers/doctor-controller');
-
-// middleware 
-routes.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
-})
 
 // main route 
 routes.get('/', (req, res) => {
@@ -21,6 +14,7 @@ routes.get('/', (req, res) => {
     .post(doctorController.createDoctor);
   routes.route('/doctors/:id')
     .get(doctorController.getDoctorById)
+    .put(doctorController.updateDoctor);
 
 // patients resource
   routes.route('/patients')
@@ -35,14 +29,6 @@ routes.get('/', (req, res) => {
     .post(appointmentController.createAppointment);
   routes.route('/appointments/:id')
     .get(appointmentController.getAppointmentById)
-
-
-
-// Find a doctor's working hours -> /api/doctors/{id}/
-// Book an doctor opening -> POST: /api/appointments/
-// Create and update the list of doctor's working hours
-//    -> POST: /api/doctors 
-//    -> UPDATE: /api/doctors/{id}/hours 
 
 
 module.exports = routes;

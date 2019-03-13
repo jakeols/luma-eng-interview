@@ -21,10 +21,7 @@ getAppointmentById = ((req, res) => {
 
 // post
 createAppointment = ((req, res) => {
-    // this is where it gets tricky, do this later
-        //Creates a new doctor
         var newAppointment = new Appointment(req.body);
-        //Save it into the DB.
         newAppointment.save((err,appointment) => {
             if(err) {
                 res.send(err);
